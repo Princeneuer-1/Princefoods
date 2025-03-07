@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Plan</title>
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- custom css file cdn link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="index.html" class="logo">
+        <i class="fas fa-utensils"></i>Prince Foods
+      </a>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="search here..."
+          id="searchBox"
+        />
+        <label for="searchBox" class="fas fa-search"></label>
+      </form>
+
+      <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-share" id="theme-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#pricing">pricing</a>
+        <a href="#review">review</a>
+        <a href="contact.html">contact</a>
+        <a href="#blogs">blogs</a>
+      </nav>
+    </header>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h1 {
+          
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Image Carousel */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .carousel img {
+            max-width: 100%;
+            height: auto;
+            display: none;
+            border-radius: 36px;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        /* Previous & Next buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .price {
+            font-size: 2.5em;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2db300e3;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            font-size: 1.1rem;
+        }
+
+        .plan-features li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .price {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+<div class="container">
+    <h1>Standard Plan</h1>
+
+    <!-- Image Carousel -->
+    <div class="carousel">
+        <img src="img/banku.jpg" class="active" alt="Banku Dish" />
+        <img src="img/waakye.jpg" alt="Waakye Dish" width="300px"/>
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
+    </div>
+
+    <!-- Price Section -->
+    <div class="price">
+        ₵<span class="amount">50</span>/mo
+    </div>
+
+    <!-- Plan Features -->
+    <ul class="plan-features">
+        <li>20 days of service</li>
+        <li>Includes Waakye</li>
+        <li>Includes Banku</li>
+    </ul>
+
+    <!-- Payment Button (Secure) -->
+    <a href="mkepay.html" class="btn">Proceed to Payment</a> <!-- Clear CTA button for payment -->
+</div>
+
+<!-- JavaScript for Carousel -->
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel img');
+
+    function changeSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+</script>
+
+</body>
+<script src="script.js"></script>
+</html>

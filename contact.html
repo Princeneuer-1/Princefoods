@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <header class="header">
+      <a href="index.html" class="logo"> <i class="fas fa-utensils"></i> Prince Food </a>
+
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name=""
+          placeholder="search here..."
+          id="searchBox"
+        />
+        <label for="searchBox" class="fas fa-search"></label>
+      </form>
+
+      <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-share" id="theme-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#pricing">pricing</a>
+        <a href="#blogs">blogs</a>
+      </nav>
+    </header>
+  </head>
+  <body>
+    <section class="contact" id="contact">
+      <h1 class="heading"><span>contact</span> us</h1>
+
+      <form action="" data-aos="zoom">
+        <div class="inputBox">
+          <input type="text" placeholder="name" />
+          <input type="email" placeholder="email" />
+        </div>
+
+        <div class="inputBox">
+          <input type="number" placeholder="number" />
+          <input type="text" placeholder="subject" />
+        </div>
+
+        <textarea
+          placeholder="message"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
+
+        <input type="submit" value="send message" class="btn" />
+        <style>
+          .contact {
+            padding: 65px;
+          }
+        </style>
+      </form>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
